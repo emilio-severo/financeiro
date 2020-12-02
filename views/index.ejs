@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Financiamento de automóvel</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Financiamento de automóvel</h3><br>
+                <form action="/calcular" method="POST">
+                    <div class="form-group">
+                        <label for="valor">Valor do automóvel (R$)</label>
+                        <input id="valor" type="number" step="any" name="valor" value="<%=valor%>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="juros">Taxa de juros mensal (%)</label>
+                        <input id="juros" type="number" step="any" name="juros" value="<%=juros%>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="meses">Meses</label>
+                        <input id="meses" type="number" step="1" name="meses" value="<%=meses%>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="valorFinal">Valor financiamento (R$)</label>
+                        <input id="valorFinal" type="number" name="valorFinal" value="<%=valorFinanciamento%>"
+                            class="form-control" readonly>
+                    </div>
+                    <input type="submit" value="Calcular" class="btn btn-primary">
+                </form>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
